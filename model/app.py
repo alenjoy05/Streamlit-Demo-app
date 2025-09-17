@@ -64,7 +64,7 @@ def load_and_train_model():
     and returns the trained model and features.
     """
     try:
-        df = pd.read_csv('beer-servings.csv')
+        df = pd.read_csv('model/beer-servings.csv')
     except FileNotFoundError:
         st.error("Error: 'beer-servings.csv' not found. Please ensure the file is in the same directory.")
         return None, None
@@ -119,3 +119,4 @@ if model:
 
 # Close main-content wrapper
 st.markdown('</div>', unsafe_allow_html=True)
+
